@@ -7,12 +7,39 @@
 //
 
 #import "AppDelegate.h"
+#import "DeckBrowserViewController.h"
 
 @implementation AppDelegate
 
+-(void)initializeFirstDeck
+{
+    CardDeck *tmp = [CardDeck create];
+    tmp.name = @"My Unique Pictures";
+    tmp.picture = @"first.jpg";
+    [tmp save];
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+   
+    // Get first Card Deck (Creating one if none exists)
+    
+    [CoreDataManager sharedManager].modelName = @"Deck";
+    [CoreDataManager sharedManager].databaseName = @"Unique";
+    NSArray *allDecks = [CardDeck all];
+    if (allDecks.count==0) {
+        [self initializeFirstDeck];
+        allDecks = [CardDeck all];
+    }
+    CardDeck *firstDeck = [allDecks objectAtIndex:0];
+    
+    
+    self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    DeckBrowserViewController* room = [[DeckBrowserViewController alloc] initWithCardDeck:firstDeck];
+    [[self window] setRootViewController:room];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							
@@ -41,6 +68,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[CoreDataManager sharedManager] saveContext];
 }
+
 
 @end
