@@ -10,7 +10,7 @@
 #import "CardDeck.h"
 #import "BottomBarView.h"
 
-@interface DeckBrowserViewController  : UIViewController <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface DeckBrowserViewController  : UIViewController <UIImagePickerControllerDelegate,UINavigationControllerDelegate, ThreeButtonAction>
 
 - (id) initWithCardDeck:(CardDeck*)cardDeck;
 - (void) swipeHandlerRight:(UISwipeGestureRecognizer *)recognizer;
@@ -20,6 +20,6 @@
 - (void) tapHandler:(UITapGestureRecognizer *)recognizer;
 - (void) singleTapHandler:(UITapGestureRecognizer *)recognizer;
 - (CGRect) getPosition:(int)position;
-
+- (void) testMethod;
 
 @end

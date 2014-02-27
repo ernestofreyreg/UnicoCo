@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31604052E05AFFC5C2B9C205 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 316041A8B8403B3B9262D60B /* NSStringAdditions.m */; };
+		31604186A94B1D14C3280779 /* NSString+BDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 316047566C973F02E05005AD /* NSString+BDUtilities.m */; };
+		316041FDF1C63DBFD833E978 /* BDRSACryptorKeyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 316046B909A37A882E48D7C6 /* BDRSACryptorKeyPair.m */; };
+		3160423F269854A87BB3CBB6 /* NSDictionary+BDParseJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 31604E48548643BCAF22E31D /* NSDictionary+BDParseJSON.m */; };
+		3160435EB879BEACDFE898A1 /* BDRSACryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 316044542E8A064749BE4894 /* BDRSACryptor.m */; };
+		3160437A25A3CD68C2B9CA5A /* BDAESCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 316048D3CEEC3F9CBA66870B /* BDAESCryptor.m */; };
+		3160439718F0F5656CEADCAF /* BDCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 31604B942B0EC5FD7F5E5A9C /* BDCryptor.m */; };
+		316044FEB53F2258CDFB721F /* NSObject+BDJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 31604849F798DFF9A46EC0CD /* NSObject+BDJSONSerialization.m */; };
+		31604579CAEBD2323AAB4CF3 /* BDJSONError.m in Sources */ = {isa = PBXBuildFile; fileRef = 316043E8F8F6C94BB2CC2F2C /* BDJSONError.m */; };
+		316047691F665AB349C34D7C /* NSArray+BDJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3160425E84676AA5C4421B80 /* NSArray+BDJSONSerialization.m */; };
+		316048294AC10D7B19D1B987 /* BDSHA512Cryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 316043B5D7C809E198D9E898 /* BDSHA512Cryptor.m */; };
+		3160494396E28E5062B3BFE4 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 31604C38D0F3A61CB341922E /* NSString+Base64.m */; };
+		31604954295E0A28806EF108 /* NSString+BDJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 31604B7208093CAA686B4D84 /* NSString+BDJSONSerialization.m */; };
+		31604C08E3506946A5C3A2D2 /* BDCryptorError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3160422D05497C06C263B358 /* BDCryptorError.m */; };
+		31604C5E359167903BB68237 /* NSDictionary+BDJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 31604300CBC87CC380E57C2C /* NSDictionary+BDJSONSerialization.m */; };
+		31604CD957E32F378BF66EB0 /* NSData+BDJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 31604CE456B15C6D9820C69E /* NSData+BDJSONSerialization.m */; };
+		31604E9FA87CC628211843F3 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 316049613C3C6B847F634508 /* NSData+Base64.m */; };
+		31604E9FECA51DE82E1A77C1 /* BDAESCBC256Cryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3160429162C3A0B125C6AF02 /* BDAESCBC256Cryptor.m */; };
+		31604EEDC4FA96B79C4CEEEF /* BDError.m in Sources */ = {isa = PBXBuildFile; fileRef = 31604A7BB3C9A92AC2BA9A6A /* BDError.m */; };
+		31604F85770C0DE6B9C5C8D7 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3160496BB4A0FC81D171CC1F /* NSDataAdditions.m */; };
 		881EC8D1181223D50076DB42 /* BottomBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 881EC8D0181223D50076DB42 /* BottomBarView.m */; };
 		881EC8D418122BE70076DB42 /* takepicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 881EC8D218122BE70076DB42 /* takepicture.png */; };
 		881EC8DB181230000076DB42 /* giveaway.png in Resources */ = {isa = PBXBuildFile; fileRef = 881EC8D7181230000076DB42 /* giveaway.png */; };
@@ -63,6 +83,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3160400BC3CB7DA3BA2BB298 /* BDAESCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDAESCryptor.h; sourceTree = "<group>"; };
+		316040B7EFBC2C87AE29D999 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		31604122BDDA95AE7D9709CD /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		316041A0B5F759C947682324 /* BDJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJSON.h; sourceTree = "<group>"; };
+		316041A8B8403B3B9262D60B /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		3160422D05497C06C263B358 /* BDCryptorError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDCryptorError.m; sourceTree = "<group>"; };
+		3160425E84676AA5C4421B80 /* NSArray+BDJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BDJSONSerialization.m"; sourceTree = "<group>"; };
+		3160429162C3A0B125C6AF02 /* BDAESCBC256Cryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDAESCBC256Cryptor.m; sourceTree = "<group>"; };
+		316042A9BDDFFEAC2F62C8AD /* BDAESCBC256Cryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDAESCBC256Cryptor.h; sourceTree = "<group>"; };
+		31604300CBC87CC380E57C2C /* NSDictionary+BDJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BDJSONSerialization.m"; sourceTree = "<group>"; };
+		3160434184C7E599D2095D82 /* NSDictionary+BDJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BDJSONSerialization.h"; sourceTree = "<group>"; };
+		316043B5D7C809E198D9E898 /* BDSHA512Cryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDSHA512Cryptor.m; sourceTree = "<group>"; };
+		316043C0FC57A41FB18B5450 /* NSObject+BDJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BDJSONSerialization.h"; sourceTree = "<group>"; };
+		316043E8F8F6C94BB2CC2F2C /* BDJSONError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJSONError.m; sourceTree = "<group>"; };
+		316044542E8A064749BE4894 /* BDRSACryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDRSACryptor.m; sourceTree = "<group>"; };
+		316044D4B34B601982B9CFAD /* NSString+BDUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BDUtilities.h"; sourceTree = "<group>"; };
+		316045D0D5B13AE3359F594E /* NSData+BDJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+BDJSONSerialization.h"; sourceTree = "<group>"; };
+		316046930A0FBAD428CB513D /* NSArray+BDJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BDJSONSerialization.h"; sourceTree = "<group>"; };
+		3160469A91A01B3AEC5F407A /* BDRSACryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDRSACryptor.h; sourceTree = "<group>"; };
+		316046A6DE3E13BB942899C9 /* BDSHA512Cryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSHA512Cryptor.h; sourceTree = "<group>"; };
+		316046B909A37A882E48D7C6 /* BDRSACryptorKeyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDRSACryptorKeyPair.m; sourceTree = "<group>"; };
+		316047357CBDC59DC8DCE1FD /* BDJSONError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJSONError.h; sourceTree = "<group>"; };
+		316047566C973F02E05005AD /* NSString+BDUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BDUtilities.m"; sourceTree = "<group>"; };
+		316047AD216DCAA9DD96896B /* BDCryptorError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCryptorError.h; sourceTree = "<group>"; };
+		31604849F798DFF9A46EC0CD /* NSObject+BDJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BDJSONSerialization.m"; sourceTree = "<group>"; };
+		316048D3CEEC3F9CBA66870B /* BDAESCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDAESCryptor.m; sourceTree = "<group>"; };
+		316049613C3C6B847F634508 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		3160496BB4A0FC81D171CC1F /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		31604A7BB3C9A92AC2BA9A6A /* BDError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDError.m; sourceTree = "<group>"; };
+		31604A85D9051447F49AC73A /* BDRSACryptorKeyPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDRSACryptorKeyPair.h; sourceTree = "<group>"; };
+		31604B1BE1655615B1992255 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		31604B7208093CAA686B4D84 /* NSString+BDJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BDJSONSerialization.m"; sourceTree = "<group>"; };
+		31604B942B0EC5FD7F5E5A9C /* BDCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDCryptor.m; sourceTree = "<group>"; };
+		31604BB1343218D7C029529C /* NSString+BDJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BDJSONSerialization.h"; sourceTree = "<group>"; };
+		31604C38D0F3A61CB341922E /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		31604CB1E7CEE51EDF851077 /* BDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLog.h; sourceTree = "<group>"; };
+		31604CBB699D7272EA165E85 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		31604CE456B15C6D9820C69E /* NSData+BDJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+BDJSONSerialization.m"; sourceTree = "<group>"; };
+		31604DF77F179262C261B19B /* NSDictionary+BDParseJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BDParseJSON.h"; sourceTree = "<group>"; };
+		31604E48548643BCAF22E31D /* NSDictionary+BDParseJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BDParseJSON.m"; sourceTree = "<group>"; };
+		31604EBDBA0A68DCC17FCA39 /* BDCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCryptor.h; sourceTree = "<group>"; };
+		31604FC6D596E96AE8D36194 /* BDError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDError.h; sourceTree = "<group>"; };
 		881EC8CF181223D50076DB42 /* BottomBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomBarView.h; sourceTree = "<group>"; };
 		881EC8D0181223D50076DB42 /* BottomBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomBarView.m; sourceTree = "<group>"; };
 		881EC8D218122BE70076DB42 /* takepicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takepicture.png; sourceTree = "<group>"; };
@@ -152,6 +214,163 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31604081284303A485E58469 /* HTTPURLJSONArrayResponse */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HTTPURLJSONArrayResponse;
+			sourceTree = "<group>";
+		};
+		31604130D256B0FBA591AE52 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				31604EB65114804EB92ED42B /* General */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		316041ACB10505B52C519EF5 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				316041A0B5F759C947682324 /* BDJSON.h */,
+				316047357CBDC59DC8DCE1FD /* BDJSONError.h */,
+				316043E8F8F6C94BB2CC2F2C /* BDJSONError.m */,
+				31604DF77F179262C261B19B /* NSDictionary+BDParseJSON.h */,
+				31604E48548643BCAF22E31D /* NSDictionary+BDParseJSON.m */,
+				316045D0D5B13AE3359F594E /* NSData+BDJSONSerialization.h */,
+				31604CE456B15C6D9820C69E /* NSData+BDJSONSerialization.m */,
+				316046930A0FBAD428CB513D /* NSArray+BDJSONSerialization.h */,
+				3160425E84676AA5C4421B80 /* NSArray+BDJSONSerialization.m */,
+				316043C0FC57A41FB18B5450 /* NSObject+BDJSONSerialization.h */,
+				31604849F798DFF9A46EC0CD /* NSObject+BDJSONSerialization.m */,
+				31604BB1343218D7C029529C /* NSString+BDJSONSerialization.h */,
+				31604B7208093CAA686B4D84 /* NSString+BDJSONSerialization.m */,
+				3160434184C7E599D2095D82 /* NSDictionary+BDJSONSerialization.h */,
+				31604300CBC87CC380E57C2C /* NSDictionary+BDJSONSerialization.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		31604231CBDDD4193542B169 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				31604CBB699D7272EA165E85 /* NSData+Base64.h */,
+				316049613C3C6B847F634508 /* NSData+Base64.m */,
+				31604B1BE1655615B1992255 /* NSString+Base64.h */,
+				31604C38D0F3A61CB341922E /* NSString+Base64.m */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
+		3160427712A0DEC1348EF032 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				316044D4B34B601982B9CFAD /* NSString+BDUtilities.h */,
+				316047566C973F02E05005AD /* NSString+BDUtilities.m */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		31604308375C45B4FA040DED /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				316041ACB10505B52C519EF5 /* JSON */,
+				3160427712A0DEC1348EF032 /* String */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		316043B4E90944BFC9C98137 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				31604EBDBA0A68DCC17FCA39 /* BDCryptor.h */,
+				31604B942B0EC5FD7F5E5A9C /* BDCryptor.m */,
+				3160400BC3CB7DA3BA2BB298 /* BDAESCryptor.h */,
+				316048D3CEEC3F9CBA66870B /* BDAESCryptor.m */,
+				3160469A91A01B3AEC5F407A /* BDRSACryptor.h */,
+				316044542E8A064749BE4894 /* BDRSACryptor.m */,
+				316047AD216DCAA9DD96896B /* BDCryptorError.h */,
+				3160422D05497C06C263B358 /* BDCryptorError.m */,
+				316046A6DE3E13BB942899C9 /* BDSHA512Cryptor.h */,
+				316043B5D7C809E198D9E898 /* BDSHA512Cryptor.m */,
+				316042A9BDDFFEAC2F62C8AD /* BDAESCBC256Cryptor.h */,
+				3160429162C3A0B125C6AF02 /* BDAESCBC256Cryptor.m */,
+				31604A85D9051447F49AC73A /* BDRSACryptorKeyPair.h */,
+				316046B909A37A882E48D7C6 /* BDRSACryptorKeyPair.m */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		3160447A5224C9BA03236E30 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				316043B4E90944BFC9C98137 /* Crypto */,
+				31604AE9B0B45834B13DFFB3 /* External */,
+				31604130D256B0FBA591AE52 /* Utilities */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		316044D6D066FF494680BCB9 /* HTTPURLResponse */ = {
+			isa = PBXGroup;
+			children = (
+				31604081284303A485E58469 /* HTTPURLJSONArrayResponse */,
+			);
+			path = HTTPURLResponse;
+			sourceTree = "<group>";
+		};
+		316045AF9FDED71514E2F18B /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				316044D6D066FF494680BCB9 /* HTTPURLResponse */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		3160499E0D4C6FC2F20A5B5E /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				31604FC6D596E96AE8D36194 /* BDError.h */,
+				31604A7BB3C9A92AC2BA9A6A /* BDError.m */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		31604AE9B0B45834B13DFFB3 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				31604231CBDDD4193542B169 /* Base64 */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		31604E594C8331249E25F1FF /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				31604CB1E7CEE51EDF851077 /* BDLog.h */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		31604EB65114804EB92ED42B /* General */ = {
+			isa = PBXGroup;
+			children = (
+				316045AF9FDED71514E2F18B /* HTTP */,
+				3160499E0D4C6FC2F20A5B5E /* Error */,
+				31604EBD9D9E844D189214A7 /* Macros */,
+				31604308375C45B4FA040DED /* Categories */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		31604EBD9D9E844D189214A7 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				31604E594C8331249E25F1FF /* Log */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
 		88590F28180B824D0036DFFD = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +441,11 @@
 				881EC8D0181223D50076DB42 /* BottomBarView.m */,
 				881EC8DE181240820076DB42 /* TopBarView.h */,
 				881EC8DF181240820076DB42 /* TopBarView.m */,
+				316041A8B8403B3B9262D60B /* NSStringAdditions.m */,
+				31604122BDDA95AE7D9709CD /* NSStringAdditions.h */,
+				3160496BB4A0FC81D171CC1F /* NSDataAdditions.m */,
+				316040B7EFBC2C87AE29D999 /* NSDataAdditions.h */,
+				3160447A5224C9BA03236E30 /* Crypto */,
 			);
 			path = UniqueCo;
 			sourceTree = "<group>";
@@ -327,7 +551,7 @@
 						DevelopmentTeam = 3Z92XM5KQC;
 					};
 					88590F51180B824D0036DFFD = {
-						TestTargetID = 88590F30180B824D0036DFFD /* UniqueCo */;
+						TestTargetID = 88590F30180B824D0036DFFD;
 					};
 				};
 			};
@@ -438,6 +662,26 @@
 				886553C21815C2450000E822 /* UIImage+Resize.m in Sources */,
 				881EC8E0181240820076DB42 /* TopBarView.m in Sources */,
 				88590F41180B824D0036DFFD /* main.m in Sources */,
+				31604052E05AFFC5C2B9C205 /* NSStringAdditions.m in Sources */,
+				31604F85770C0DE6B9C5C8D7 /* NSDataAdditions.m in Sources */,
+				3160439718F0F5656CEADCAF /* BDCryptor.m in Sources */,
+				3160437A25A3CD68C2B9CA5A /* BDAESCryptor.m in Sources */,
+				3160435EB879BEACDFE898A1 /* BDRSACryptor.m in Sources */,
+				31604C08E3506946A5C3A2D2 /* BDCryptorError.m in Sources */,
+				316048294AC10D7B19D1B987 /* BDSHA512Cryptor.m in Sources */,
+				31604E9FECA51DE82E1A77C1 /* BDAESCBC256Cryptor.m in Sources */,
+				316041FDF1C63DBFD833E978 /* BDRSACryptorKeyPair.m in Sources */,
+				31604E9FA87CC628211843F3 /* NSData+Base64.m in Sources */,
+				3160494396E28E5062B3BFE4 /* NSString+Base64.m in Sources */,
+				31604EEDC4FA96B79C4CEEEF /* BDError.m in Sources */,
+				31604579CAEBD2323AAB4CF3 /* BDJSONError.m in Sources */,
+				3160423F269854A87BB3CBB6 /* NSDictionary+BDParseJSON.m in Sources */,
+				31604CD957E32F378BF66EB0 /* NSData+BDJSONSerialization.m in Sources */,
+				316047691F665AB349C34D7C /* NSArray+BDJSONSerialization.m in Sources */,
+				316044FEB53F2258CDFB721F /* NSObject+BDJSONSerialization.m in Sources */,
+				31604954295E0A28806EF108 /* NSString+BDJSONSerialization.m in Sources */,
+				31604C5E359167903BB68237 /* NSDictionary+BDJSONSerialization.m in Sources */,
+				31604186A94B1D14C3280779 /* NSString+BDUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,7 +758,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos7.0;
 			};
 			name = Debug;
 		};
@@ -546,7 +790,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos7.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

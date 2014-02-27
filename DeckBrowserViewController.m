@@ -1,4 +1,4 @@
-//
+#import "BDRSACryptorKeyPair.h"//
 //  DeckBrowserViewController.m
 //  UniqueCo
 //
@@ -11,6 +11,12 @@
 #import "FrontCardView.h"
 #import "BackCardViewController.h"
 #import "TopBarView.h"
+#import "UIImage+Resize.h"
+#include <CoreFoundation/CoreFoundation.h>
+#include <Security/Security.h>
+#include "NSStringAdditions.h"
+#import "NSDataAdditions.h"
+#import "BDRSACryptor.h"
 
 
 @interface DeckBrowserViewController ()
@@ -24,6 +30,9 @@
 @property int centerAreaPosition;
 @property NSArray *positions;
 @property BOOL allControlsOnScreen;
+
+- (NSData *) getRSAPublicKey;
+- (void)encryptionCycleWithRSACryptor:(BDRSACryptor *)RSACryptor keyPair:(BDRSACryptorKeyPair *)RSAKeyPair error:(BDError *)error;
 
 @end
 
@@ -51,7 +60,7 @@
     if (action==1) {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
-        picker.allowsEditing = YES;
+        picker.allowsEditing = NO;
 
 #if TARGET_IPHONE_SIMULATOR
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -60,6 +69,8 @@
 #endif
         
         [self presentViewController:picker animated:YES completion:NULL];
+    } else if (action==0) {
+        [self testMethod];
     }
 }
 
@@ -67,14 +78,17 @@
 {
     NSLog(@"didFinishPickingMediaWithInfo");
     
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    
-    NSLog(@"Choosen image acquired");
-    
+    UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
+
+    CGFloat scale = [[UIScreen mainScreen] scale];
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+
+    UIImage *resizedImage = [chosenImage resizedImageWithContentMode:UIViewContentModeScaleAspectFill bounds:CGSizeMake(screenSize.width*scale, screenSize.height*scale)  interpolationQuality:kCGInterpolationHigh];
+
+    UIImageWriteToSavedPhotosAlbum(resizedImage, nil, nil, nil);
+
     [picker dismissViewControllerAnimated:YES completion:NULL];
-    
-    
-    
+
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -189,8 +203,179 @@
 
 - (CGRect) getPosition:(int)position
 {
-    return [[_positions objectAtIndex:position+1] CGRectValue];
+    return [[_positions objectAtIndex:(NSUInteger) (position + 1)] CGRectValue];
 }
+
+- (void)testMethod {
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+
+    NSString *publicKeyFile = [NSString stringWithFormat:@"%@/public.key", documentsDirectory];
+    NSString *privateKeyFile = [NSString stringWithFormat:@"%@/private.key", documentsDirectory];
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:publicKeyFile] && [fileManager fileExistsAtPath:privateKeyFile]) {
+        // Already created keys, load them
+        BDError *error = [[BDError alloc] init];
+        BDRSACryptor *cryptor = [[BDRSACryptor alloc] init];
+
+//        NSString *privateKey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"private" ofType:@"key"]
+//                                                         encoding:NSUTF8StringEncoding
+//                                                            error:nil];
+
+        NSStringEncoding encoding;
+        NSString *privateKey = [NSString stringWithContentsOfFile:privateKeyFile usedEncoding:&encoding  error:NULL];
+
+//        NSString *publicKey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"public" ofType:@"key"]
+//                                                        encoding:NSUTF8StringEncoding
+//                                                           error:nil];
+
+        NSString *publicKey = [NSString stringWithContentsOfFile:publicKeyFile usedEncoding:&encoding error:NULL];
+
+        BDRSACryptorKeyPair *RSAKeyPair = [[BDRSACryptorKeyPair alloc] initWithPublicKey:publicKey
+                                                                              privateKey:privateKey];
+
+        [self encryptionCycleWithRSACryptor:cryptor keyPair:RSAKeyPair error:error];
+
+
+
+
+    } else {
+        // Create key pair
+        BDError *error = [[BDError alloc] init];
+        BDRSACryptor *RSACryptor = [[BDRSACryptor alloc] init];
+
+        BDRSACryptorKeyPair *RSAKeyPair = [RSACryptor generateKeyPairWithKeyIdentifier:@"co.getunique.user" error:error];
+
+        [fileManager createFileAtPath:publicKeyFile contents:[RSAKeyPair.publicKey dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+        [fileManager createFileAtPath:privateKeyFile contents:[RSAKeyPair.privateKey dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Generated Keys"
+                                                        message:@"Exported public.key and private.key to files."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+
+
+    //    error handling...
+
+}
+
+- (void)encryptionCycleWithRSACryptor:(BDRSACryptor *)cryptor keyPair:(BDRSACryptorKeyPair *)RSAKeyPair error:(BDError *)error
+{
+    NSString *cipherText = [cryptor encrypt:@"This is a show of what we can do" key:RSAKeyPair.publicKey error:error];
+
+    BDDebugLog(@"Cipher Text:\n%@", cipherText);
+
+    NSString *recoveredText = [cryptor decrypt:cipherText key:RSAKeyPair.privateKey error:error];
+
+    BDDebugLog(@"Recovered Text:\n%@", recoveredText);
+}
+
+
+
+
+// Helper function for ASN.1 encoding
+
+size_t encodeLength(unsigned char * buf, size_t length) {
+
+    // encode length in ASN.1 DER format
+    if (length < 128) {
+        buf[0] = length;
+        return 1;
+    }
+
+    size_t i = (length / 256) + 1;
+    buf[0] = i + 0x80;
+    for (size_t j = 0 ; j < i; ++j) {         buf[i - j] = length & 0xFF;         length = length >> 8;
+    }
+
+    return i + 1;
+}
+
+- (NSData *) getRSAPublicKey
+{
+
+    static const unsigned char _encodedRSAEncryptionOID[15] = {
+
+            /* Sequence of length 0xd made up of OID followed by NULL */
+            0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86,
+            0xf7, 0x0d, 0x01, 0x01, 0x01, 0x05, 0x00
+
+    };
+    static const UInt8 publicKeyIdentifier[] =  "co.getunique.user.publickey\0";
+
+
+    NSData * publicTag = [NSData dataWithBytes:publicKeyIdentifier length:strlen((const char *) publicKeyIdentifier)];
+
+    // Now lets extract the public key - build query to get bits
+    NSMutableDictionary * queryPublicKey =
+            [[NSMutableDictionary alloc] init];
+
+    [queryPublicKey setObject:(__bridge id)kSecClassKey
+                       forKey:(__bridge id)kSecClass];
+    [queryPublicKey setObject:publicTag
+                       forKey:(__bridge id)kSecAttrApplicationTag];
+    [queryPublicKey setObject:(__bridge id)kSecAttrKeyTypeRSA
+                       forKey:(__bridge id)kSecAttrKeyType];
+    [queryPublicKey setObject:[NSNumber numberWithBool:YES]
+                       forKey:(__bridge id)kSecReturnData];
+
+    NSData * publicKeyBits;
+    OSStatus err = SecItemCopyMatching((__bridge CFDictionaryRef)queryPublicKey, (CFTypeRef)&publicKeyBits);
+
+    if (err != noErr) {
+        return nil;
+    }
+
+    // OK - that gives us the "BITSTRING component of a full DER
+    // encoded RSA public key - we now need to build the rest
+
+    unsigned char builder[15];
+    NSMutableData * encKey = [[NSMutableData alloc] init];
+    int bitstringEncLength;
+
+    // When we get to the bitstring - how will we encode it?
+    if  ([publicKeyBits length ] + 1  < 128 )
+        bitstringEncLength = 1 ;
+    else
+        bitstringEncLength = (([publicKeyBits length ] +1 ) / 256 ) + 2 ;
+
+    // Overall we have a sequence of a certain length
+    builder[0] = 0x30;    // ASN.1 encoding representing a SEQUENCE
+    // Build up overall size made up of -
+    // size of OID + size of bitstring encoding + size of actual key
+    size_t i = sizeof(_encodedRSAEncryptionOID) + 2 + bitstringEncLength +
+            [publicKeyBits length];
+    size_t j = encodeLength(&builder[1], i);
+    [encKey appendBytes:builder length:j +1];
+
+    // First part of the sequence is the OID
+    [encKey appendBytes:_encodedRSAEncryptionOID
+                 length:sizeof(_encodedRSAEncryptionOID)];
+
+    // Now add the bitstring
+    builder[0] = 0x03;
+    j = encodeLength(&builder[1], [publicKeyBits length] + 1);
+    builder[j+1] = 0x00;
+    [encKey appendBytes:builder length:j + 2];
+
+    // Now the actual key
+    [encKey appendData:publicKeyBits];
+
+    // Now translate the result to a Base64 string
+    return [NSData dataWithBytes:[encKey bytes] length:[encKey length]];
+//    NSString * ret = [NSString base64StringFromData:encKey length:[encKey length]];
+//    return ret;
+}
+
+
+
+
+
 
 - (void) tapHandler:(UITapGestureRecognizer *)recognizer
 {
@@ -203,7 +388,7 @@
 
 - (void) singleTapHandler:(UITapGestureRecognizer *)recognizer
 {
-    if (_allControlsOnScreen==NO) {
+    if (!_allControlsOnScreen) {
         NSLog(@"Single Tap");
         if (_centerAreaPosition!=0) {
             if (_centerAreaPosition<0) {
@@ -297,8 +482,8 @@
                               delay:0
                             options: UIViewAnimationOptionCurveEaseOut
                          animations:^{
-                             FrontCardView *goingIn = [_allCards objectAtIndex:_currentCard-1];
-                             FrontCardView *goingOut = [_allCards objectAtIndex:_currentCard];
+                             FrontCardView *goingIn = [_allCards objectAtIndex:(NSUInteger) (_currentCard - 1)];
+                             FrontCardView *goingOut = [_allCards objectAtIndex:(NSUInteger) _currentCard];
 
                              [goingIn setAtCenter];
                              [goingOut setAtRight];
@@ -319,8 +504,8 @@
                               delay:0
                             options: UIViewAnimationOptionCurveEaseOut
                          animations:^{
-                             FrontCardView *goingIn = [_allCards objectAtIndex:_currentCard+1];
-                             FrontCardView *goingOut = [_allCards objectAtIndex:_currentCard];
+                             FrontCardView *goingIn = [_allCards objectAtIndex:(NSUInteger) (_currentCard + 1)];
+                             FrontCardView *goingOut = [_allCards objectAtIndex:(NSUInteger) _currentCard];
                              
                              [goingIn setAtCenter];
                              [goingOut setAtLeft];
@@ -346,7 +531,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 @end

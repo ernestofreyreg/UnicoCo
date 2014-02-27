@@ -6,6 +6,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class NSString;
 
-@interface NSDataAdditions : NSObject
+@interface NSData (NSDataAdditions)
+
++ (NSData *) base64DataFromString:(NSString *)string;
+
 @end

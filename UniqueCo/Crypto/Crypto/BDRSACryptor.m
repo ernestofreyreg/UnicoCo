@@ -37,28 +37,20 @@ static unsigned char oidSequence [] = { 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48
 #pragma mark - Encryption/decryption methods
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString *)encrypt:(NSString *)plainText
-                  key:(NSString *)key
-                error:(BDError *)error
+- (NSString *)encrypt:(NSString *)plainText key:(NSString *)key error:(BDError *)error
 {
     if (!plainText)
     {
-        [error addErrorWithType:BDCryptoErrorEncrypt
-                     errorClass:[BDCryptorError class]];
+        [error addErrorWithType:BDCryptoErrorEncrypt errorClass:[BDCryptorError class]];
     
         return nil;
     }
     
-    [self setPublicKey:key
-                   tag:[self publicKeyIdentifier]
-                 error:error];
+    [self setPublicKey:key tag:[self publicKeyIdentifier] error:error];
     
-    SecKeyRef publicKey = [self keyRefWithTag:[self publicKeyIdentifier]
-                                        error:error];
+    SecKeyRef publicKey = [self keyRefWithTag:[self publicKeyIdentifier] error:error];
     
-    if ([BDError error:error
-     containsErrorType:BDCryptoErrorRSACopyKey
-            errorClass:[BDCryptorError class]])
+    if ([BDError error:error containsErrorType:BDCryptoErrorRSACopyKey errorClass:[BDCryptorError class]])
     {
         return nil;
     }
@@ -78,8 +70,7 @@ static unsigned char oidSequence [] = { 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48
         
         free(cipherBuffer);
         
-        [error addErrorWithType:BDCryptoErrorRSATextLength
-                     errorClass:[BDCryptorError class]];
+        [error addErrorWithType:BDCryptoErrorRSATextLength errorClass:[BDCryptorError class]];
         
         return nil;
     }
@@ -93,14 +84,12 @@ static unsigned char oidSequence [] = { 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48
     
     if (secStatus != noErr)
     {
-        [error addErrorWithType:BDCryptoErrorEncrypt
-                     errorClass:[BDCryptorError class]];
+        [error addErrorWithType:BDCryptoErrorEncrypt errorClass:[BDCryptorError class]];
                 
         return nil;
     }
     
-    NSData *encryptedData = [NSData dataWithBytes:cipherBuffer
-                                           length:cipherBufferSize];
+    NSData *encryptedData = [NSData dataWithBytes:cipherBuffer length:cipherBufferSize];
     
 //    BDDebugLog(@"Base 64 Encrypted String:\n%@", [encryptedData base64EncodedString]);
     

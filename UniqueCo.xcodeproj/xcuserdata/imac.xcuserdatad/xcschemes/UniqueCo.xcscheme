@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "88590F30180B824D0036DFFD"
-               BuildableName = "UniqueCo.app"
+               BuildableName = "UniqueCo"
                BlueprintName = "UniqueCo"
                ReferencedContainer = "container:UniqueCo.xcodeproj">
             </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "88590F30180B824D0036DFFD"
-            BuildableName = "UniqueCo.app"
+            BuildableName = "UniqueCo"
             BlueprintName = "UniqueCo"
             ReferencedContainer = "container:UniqueCo.xcodeproj">
          </BuildableReference>

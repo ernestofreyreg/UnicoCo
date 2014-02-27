@@ -4,8 +4,10 @@
 //
 
 
-#import <Foundation/Foundation.h>
+#import <Foundation/NSString.h>
 
+@interface NSString (NSStringAdditions)
 
-@interface NSStringAdditions : NSObject
++ (NSString *) base64StringFromData:(NSData *)data length:(int)length;
+
 @end
