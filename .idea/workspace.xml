@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9587d779-ce2b-44d8-930d-0062eb7c4131" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDAESCBC256Cryptor.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDAESCBC256Cryptor.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDAESCryptor.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDAESCryptor.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDCryptor.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDCryptor.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDCryptorError.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDCryptorError.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Error/BDError.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Error/BDError.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/BDJSON.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/BDJSONError.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/BDJSONError.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Macros/Log/BDLog.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptor.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptor.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptorKeyPair.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptorKeyPair.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDSHA512Cryptor.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDSHA512Cryptor.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSArray+BDJSONSerialization.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSArray+BDJSONSerialization.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSData+BDJSONSerialization.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSData+BDJSONSerialization.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/External/Base64/NSData+Base64.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/External/Base64/NSData+Base64.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/NSDataAdditions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/NSDataAdditions.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSDictionary+BDJSONSerialization.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSDictionary+BDJSONSerialization.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSDictionary+BDParseJSON.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSDictionary+BDParseJSON.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSObject+BDJSONSerialization.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSObject+BDJSONSerialization.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSString+BDJSONSerialization.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/JSON/NSString+BDJSONSerialization.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/String/NSString+BDUtilities.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Categories/String/NSString+BDUtilities.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/External/Base64/NSString+Base64.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/Crypto/External/Base64/NSString+Base64.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/NSStringAdditions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UniqueCo/NSStringAdditions.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/UniqueCo/ViewController.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UniqueCo/AppDelegate.m" afterPath="$PROJECT_DIR$/UniqueCo/AppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeckBrowserViewController.h" afterPath="$PROJECT_DIR$/DeckBrowserViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeckBrowserViewController.m" afterPath="$PROJECT_DIR$/DeckBrowserViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UniqueCo/UniqueCo-Prefix.pch" afterPath="$PROJECT_DIR$/UniqueCo/UniqueCo-Prefix.pch" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UniqueCo.xcodeproj/xcuserdata/imac.xcuserdatad/xcschemes/UniqueCo.xcscheme" afterPath="$PROJECT_DIR$/UniqueCo.xcodeproj/xcuserdata/imac.xcuserdatad/xcschemes/UniqueCo.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UniqueCo.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/UniqueCo.xcodeproj/project.pbxproj" />
+    </list>
+    <ignored path="UniqueCo.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="UniqueCo" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="FrontCardView.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UniqueCo/FrontCardView.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="60" selection-start="456" selection-end="506" vertical-scroll-proportion="0.44409615" vertical-offset="69" max-vertical-offset="1900">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrontCardView.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UniqueCo/FrontCardView.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="18" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="513">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppDelegate.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UniqueCo/AppDelegate.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="231" selection-end="278" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="399">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppDelegate.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UniqueCo/AppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="53" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="1558">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeckBrowserViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DeckBrowserViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="182" column="20" selection-start="6687" selection-end="6698" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10317">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BDRSACryptor.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptor.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="20" selection-start="873" selection-end="873" vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1843">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BDCryptor.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDCryptor.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="16" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="570">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BDCryptor.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDCryptor.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="15" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="741">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BDRSACryptor.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptor.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="0" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.0" vertical-offset="1976" max-vertical-offset="15333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeckBrowserViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DeckBrowserViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="11" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="589">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/UniqueCo/Card.m" />
+        <option value="$PROJECT_DIR$/UniqueCo/CardDeck.m" />
+        <option value="$PROJECT_DIR$/UniqueCo/FrontCardView.m" />
+        <option value="$PROJECT_DIR$/UniqueCo/BackCardViewController.m" />
+        <option value="$PROJECT_DIR$/UniqueCo/MultiDeckViewController.m" />
+        <option value="$PROJECT_DIR$/DeckBrowserViewController.h" />
+        <option value="$PROJECT_DIR$/UniqueCo/NSStringAdditions.h" />
+        <option value="$PROJECT_DIR$/UniqueCo/NSStringAdditions.m" />
+        <option value="$PROJECT_DIR$/UniqueCo/NSDataAdditions.h" />
+        <option value="$PROJECT_DIR$/UniqueCo/NSDataAdditions.m" />
+        <option value="$PROJECT_DIR$/UniqueCo/UniqueCo-Prefix.pch" />
+        <option value="$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptor.m" />
+        <option value="$PROJECT_DIR$/DeckBrowserViewController.m" />
+        <option value="$PROJECT_DIR$/UniqueCo/AppDelegate.m" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1920" />
+    <option name="height" value="1054" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UniqueCo" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UniqueCo" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UniqueCo" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UniqueCo" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UniqueCo" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supporting Files" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="XcodeSettings" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/iOS-Certificate--Key--and-Trust-Sample-Project-master/Crypto/Crypto" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="UniqueCo" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.UniqueCo">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="UniqueCo" TARGET_NAME="UniqueCo" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="UniqueCo" RUN_TARGET_NAME="UniqueCo" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PROJECT_NAME="UniqueCo" TARGET_NAME="UniqueCoTests" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PROJECT_NAME="UniqueCo" TARGET_NAME="UniqueCo" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="UniqueCo" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="UniqueCo" PROJECT_NAME="UniqueCo" TARGET_NAME="UniqueCo" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="UniqueCo" RUN_TARGET_NAME="UniqueCo" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <RunnerSettings RunnerId="AppRunner" />
+      <ConfigurationWrapper RunnerId="AppRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-ObjectiveRecord" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="Pods-ObjectiveRecord" PROJECT_NAME="Pods" TARGET_NAME="Pods-ObjectiveRecord" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-ObjectiveSugar" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="Pods-ObjectiveSugar" PROJECT_NAME="Pods" TARGET_NAME="Pods-ObjectiveSugar" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="Pods" PROJECT_NAME="Pods" TARGET_NAME="Pods" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Application.UniqueCo" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Pods-ObjectiveRecord" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Pods-ObjectiveSugar" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Pods" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9587d779-ce2b-44d8-930d-0062eb7c4131" name="Default" comment="" />
+      <created>1382391601197</created>
+      <updated>1382391601197</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first git commit">
+      <created>1382392161176</created>
+      <updated>1382392161176</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1920" height="1054" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18229167" sideWeight="0.67005074" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="first git commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first git commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptor.m</url>
+          <line>41</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/UniqueCo/NSStringAdditions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="141" selection-end="260" vertical-scroll-proportion="0.21044303" vertical-offset="0" max-vertical-offset="632" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/NSStringAdditions.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="2" selection-start="533" selection-end="533" vertical-scroll-proportion="0.3908228" vertical-offset="0" max-vertical-offset="1482" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/UniqueCo-Prefix.pch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="4" selection-start="431" selection-end="431" vertical-scroll-proportion="0.54113925" vertical-offset="0" max-vertical-offset="632" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/NSDataAdditions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="253" selection-end="253" vertical-scroll-proportion="0.3908228" vertical-offset="0" max-vertical-offset="632" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptorKeyPair.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="6" selection-start="626" selection-end="626" vertical-scroll-proportion="0.36867088" vertical-offset="90" max-vertical-offset="722" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDCryptor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="16" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDCryptor.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="15" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="741">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="20" selection-start="873" selection-end="873" vertical-scroll-proportion="0.0" vertical-offset="151" max-vertical-offset="1843">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/Crypto/Crypto/BDRSACryptor.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="0" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.0" vertical-offset="1679" max-vertical-offset="15219">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/Crypto/Utilities/General/Macros/Log/BDLog.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="8" selection-start="318" selection-end="318" vertical-scroll-proportion="0.3374778" vertical-offset="0" max-vertical-offset="563" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/AppDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="231" selection-end="278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="53" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="1558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeckBrowserViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="11" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/FrontCardView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="18" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeckBrowserViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="20" selection-start="6687" selection-end="6698" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10317">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UniqueCo/FrontCardView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="60" selection-start="456" selection-end="506" vertical-scroll-proportion="0.44409615" vertical-offset="69" max-vertical-offset="1900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
